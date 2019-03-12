@@ -3,11 +3,7 @@
 # Copyright 2019 Tuoran (ArcticJieer) Zhang. All rights reserved.
 # mailto:tigerjieer@163.com http://tuoran.fam.cx/
 
-# Checks requirements
-command -v wecache 1> /dev/null ||
-	source wecache.sh	# I should alias wecache to wget. But that somehow doesn't work
-
-function bingwallpapererror {
+bingwallpapererror () {
 	echo "${FontRed}ERROR: $1${FontRev}"
 	exit 1
 }
@@ -57,7 +53,7 @@ for i in $@ ; do
 done
 
 # Get index.html, and greps image file
-src=`wecache "https://www.bing.com/?cc=$ccc" | \
+src=`wget -O - "https://www.bing.com/?cc=$ccc" | \
 	grep -oEe "/th[^\"\\&]+\.jpg" - | uniq - | \
 	head -n $new - | \
 	tail -n 1 -`
@@ -72,7 +68,7 @@ if test a$sum == 'afalse' ; then
 	touch "$out" ||
 		bingwallpapererror 'Cannot touch output file. Check permissions'
 
-	wecache "http://www.bing.com/$src" 1> "$out"
+	wget -O "$out" "http://www.bing.com/$src"
 
 	test a`head -c 1 "$out"` == a &&
 		bingwallpapererror 'Download error'

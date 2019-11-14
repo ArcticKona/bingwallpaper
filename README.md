@@ -10,7 +10,7 @@ CC	Two letter country code to give to Bing
 --sum	Don't download image, just summarize
 --help	Print this help and exit
 Limitations: Only sets wallpaper with GNOME, but others still can use --file.
-Copyright (c) 2018-2019 Tuoran (ArcticJieer) Zhang. All rights reserved. Version 2.0
+Copyright (c) 2018-2019 Arctic Kona. All rights reserved. Version 2.0
 ```
 
 

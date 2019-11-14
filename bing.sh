@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bing wallpaper downloader 2.0
-# Copyright 2019 Tuoran (ArcticJieer) Zhang. All rights reserved.
+# Copyright 2019 Arctic Kona. All rights reserved.
 # mailto:tigerjieer@163.com http://tuoran.fam.cx/
 
 bingwallpapererror () {
@@ -20,7 +20,7 @@ ccc=''	# Country code
 for i in $@ ; do
 	case $i in
 		--help|-h)
-			printf "Usage: $0 [--file=FILE] [--new] [--sum] [--help] [CC] \nDownloads and set latest wallpaper background from Bing homepage (www.bing.com).\n\tCC\tTwo letter country code to give to Bing\n\t--file=FILE\tDon't set, save to FILE instead\n\t--new\tAttempts the newest wallpaper, not current one\n\t--sum\tDon't download image, just summarize\n\t--help\tPrint this help and exit\nLimitations: \nOnly sets wallpaper with GNOME, but others still can use --file.\nCopyright (c) 2018-2019 Tuoran (ArcticJieer) Zhang. All rights reserved. Version 2.0\n"
+			printf "Usage: $0 [--file=FILE] [--new] [--sum] [--help] [CC] \nDownloads and set latest wallpaper background from Bing homepage (www.bing.com).\n\tCC\tTwo letter country code to give to Bing\n\t--file=FILE\tDon't set, save to FILE instead\n\t--new\tAttempts the newest wallpaper, not current one\n\t--sum\tDon't download image, just summarize\n\t--help\tPrint this help and exit\nLimitations: \nOnly sets wallpaper with GNOME, but others still can use --file.\nCopyright (c) 2018-2019 Arctic Kona. All rights reserved. Version 2.0\n"
 			exit 0
 			;;
 		--new|-n)
